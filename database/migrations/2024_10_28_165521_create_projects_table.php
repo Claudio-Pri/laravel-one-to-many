@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
 
-            //title string
             $table->string('title');
-            //slug string
             $table->string('slug')->unique();
-            //url string
             $table->string('url', 2048)->nullable();
-            //description text
             $table->text('description');
+
+            //foreign key
+            // $table->unsignedBigInteger('type_id')->nullable();
+            // $table->foreign('type_id')->references('id')->on('types');
 
             $table->timestamps();
         });

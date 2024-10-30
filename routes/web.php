@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\Admin\MainController as AdminMainController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\TypeController;
 
 
 /*
@@ -28,6 +29,7 @@ Route::prefix('admin')
 
     Route::get('/dashboard', [AdminMainController::class, 'dashboard'])->name('dashboard');
     Route::resource('projects', ProjectController::class);
+    Route::resource('types', TypeController::class);
 });
 
 require __DIR__.'/auth.php';

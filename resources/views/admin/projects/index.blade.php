@@ -56,6 +56,9 @@
                     <a href="{{ route('admin.projects.create') }}" class="btn btn-success">+ Crea nuovo progetto</a>
 
                   </div>
+                  <div>
+                    <a href="{{ route('admin.types.index') }}">Vai alle tipologie</a>
+                  </div>
             </div>
         </div>
     </div>

@@ -18,6 +18,7 @@
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Titolo</th>
+                        <th scope="col">Categoria</th>
                         <th scope="col">Slug</th>
                         <th scope="col">url</th>
                         <th scope="col">Descrizione</th>
@@ -29,6 +30,13 @@
                       <tr>
                         <th scope="row">{{ $project->id }}</th>
                         <td>{{ $project->title }}</td>
+                        <td>
+                          @if($project->type != null)
+                            {{ $project->type->title }}
+                          @else
+                            -
+                          @endif
+                        </td>
                         <td>{{ $project->slug }}</td>
                         <td>{{ $project->url }}</td>
                         <td>{{ $project->description }}</td>
